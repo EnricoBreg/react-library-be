@@ -1,4 +1,13 @@
 # REACT LIBRARY BACK-END PRJ
+<div>
+  <img
+    src="https://flagcdn.com/16x12/it.png"
+    srcset="https://flagcdn.com/32x24/it.png 2x,
+      https://flagcdn.com/48x36/it.png 3x"
+    width="16"
+    height="12"
+    alt="Italy">
+</div>
 
 ### Introduzione
 Progetto con framework Spring Boot 3, Data Rest JPA per progetto React-Library.
@@ -12,6 +21,23 @@ Repo Proj frontend qui: [React-Library-FE](https://github.com/EnricoBreg/react-l
 - Far partire l'applicazione SpringBoot
 
 ---
+
+<div>
+  <img
+  src="https://flagcdn.com/16x12/gb.png"
+  srcset="https://flagcdn.com/32x24/gb.png 2x,
+    https://flagcdn.com/48x36/gb.png 3x"
+  width="16"
+  height="12"
+  alt="United Kingdom">
+<img
+  src="https://flagcdn.com/16x12/us.png"
+  srcset="https://flagcdn.com/32x24/us.png 2x,
+    https://flagcdn.com/48x36/us.png 3x"
+  width="16"
+  height="12"
+  alt="United States">
+</div>
 
 ### Introduction
 Project with Spring Boot 3 framework, Data Rest JPA for React-Library project.
