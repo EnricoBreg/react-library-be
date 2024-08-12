@@ -1,6 +1,7 @@
 package com.luv2code.springbootlibrary.config;
 
 import com.luv2code.springbootlibrary.entity.Book;
+import com.luv2code.springbootlibrary.entity.Review;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
 import org.springframework.data.rest.webmvc.config.RepositoryRestConfigurer;
@@ -17,14 +18,16 @@ public class MyDataRestConfig implements RepositoryRestConfigurer {
         HttpMethod[] unsupportedActions = {HttpMethod.POST, HttpMethod.PATCH, HttpMethod.DELETE, HttpMethod.PUT};
 
         config.exposeIdsFor(Book.class);
+        config.exposeIdsFor(Review.class);
 
         disableHttpMethods(Book.class, config, unsupportedActions);
+        disableHttpMethods(Review.class, config, unsupportedActions);
 
-        /* Configure CORS Mapping */
+        /* Configure CORS (Cross-origin Resource Sharing) Mapping */
         cors.addMapping(config.getBasePath() + "/**").allowedOrigins(allowedOrigins);
     }
 
-    private void disableHttpMethods(Class<Book> theClass, RepositoryRestConfiguration config, HttpMethod[] unsupportedActions) {
+    private void disableHttpMethods(Class<?> theClass, RepositoryRestConfiguration config, HttpMethod[] unsupportedActions) {
         config.getExposureConfiguration()
               .forDomainType(theClass)
               .withItemExposure((metadata, httpMethods) -> httpMethods.disable(unsupportedActions))
